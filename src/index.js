@@ -1,3 +1,4 @@
+const functions = require('firebase-functions');
 const express = require('express');
 const exporessLayouts = require('express-ejs-layouts');
 const path = require('path');
