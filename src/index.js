@@ -3,9 +3,11 @@ const exporessLayouts = require('express-ejs-layouts');
 const path = require('path');
 const cors = require('cors');
 const router = require('./routes');
+const { setupQuery } = require('./data-access');
 
 const port = 3000;
 const app = express();
+setupQuery();
 
 app.set('views', path.join(__dirname, '/views'));
 app.set('view options', {
@@ -17,6 +19,7 @@ app.use(exporessLayouts);
 app.use(express.static(path.join(__dirname, '/public')))
 app.use('imgaes/', express.static(path.join(__dirname, '/public/images')))
 app.use(express.json({ extended: false }));
+app.use(express.urlencoded());
 app.use(cors({
   origin: '*',
 }));
