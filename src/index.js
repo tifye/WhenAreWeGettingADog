@@ -1,3 +1,4 @@
+const functions = require("firebase-functions");
 const express = require('express');
 const exporessLayouts = require('express-ejs-layouts');
 const path = require('path');
@@ -26,6 +27,8 @@ app.use(cors({
 
 app.use(router);
 
-app.listen(port, () => {
+/* app.listen(port, () => {
   console.log(`Server started on port ${port}`);
-});
+}); */
+
+exports.app = functions.https.onRequest(app);
