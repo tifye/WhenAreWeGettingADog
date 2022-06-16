@@ -15,6 +15,7 @@ app.set('view engine', 'ejs');
 
 app.use(exporessLayouts);
 app.use(express.static(path.join(__dirname, '/public')))
+app.use('imgaes/', express.static(path.join(__dirname, '/public/images')))
 app.use(express.json({ extended: false }));
 app.use(cors({
   origin: '*',

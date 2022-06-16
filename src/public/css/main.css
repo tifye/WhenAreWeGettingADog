@@ -1,0 +1,21 @@
+:root {
+  --var-dark: rgb(50, 50, 50);
+}
+
+.border-down {
+  border-bottom: .2rem;
+  border-bottom-style: solid;
+  border-color: var(--var-dark);
+}
+
+.hero {
+  background-image: url("/images/border-collie-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

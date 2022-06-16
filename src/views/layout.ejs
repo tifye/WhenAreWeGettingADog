@@ -4,9 +4,14 @@
 </head>
 <body>
   <main>
-    <div>
-      <h1>This is great</h1>
-      <p>Welcome to templating using EJS</p>
+    <div class="columns col-gapless">
+      <%- include('./partials/header.ejs') %> 
+      <%- include('./partials/whatisadog.ejs') %> 
+      <%- include('./partials/poodlefigure.ejs') %> 
+      <%- include("./partials/whygetadog.ejs") %> 
+      <%- include("./partials/carousel.ejs") %> 
+      <%- include("./partials/dogslist.ejs") %>
+      <%- include("./partials/dogform.ejs") %>
     </div>
   </main>  
 </body>
