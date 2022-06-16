@@ -12,8 +12,8 @@
     <%= description %> 
   </div>
   <div class="card-footer">
-    <form class="form-group float-right" action="/" method="post">
-      <input class="btn btn-error" formaction="/dogs/delete" type="button" name="submit" id="submit" value="Remove">
+    <form class="form-group float-right" action="/delete/<%= dogId %>" method="post">
+      <input class="btn btn-error" type="submit" name="submit" id="submit" value="Remove">
     </form>
   </div>
 </div>

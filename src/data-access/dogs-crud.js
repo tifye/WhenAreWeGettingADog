@@ -27,7 +27,22 @@ const createDog = async (dog) => {
   });
 };
 
+const removeDog = async (dogId) => {
+  return new Promise((resolve, reject) => {
+    const query = `
+    DELETE FROM Dogs
+    WHERE dogId = ?
+    `;
+    const values = [dogId];
+    db.run(query, values, (error) => {
+      if (error) reject(error);
+      resolve();
+    });
+  });
+};
+
 module.exports = {
   createDog,
   getAllDogs,
+  removeDog,
 };
