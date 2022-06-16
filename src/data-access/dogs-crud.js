@@ -1,7 +1,18 @@
 const { db } = require("./db-connection");
 
+const getAllDogs = async () => {
+  return new Promise((resolve, reject) => {
+    const query = `
+    SELECT * FROM Dogs
+    `;
+    db.all(query, (error, rows) => {
+      if (error) reject(error);
+      resolve(rows);
+    });
+  });
+};
+
 const createDog = async (dog) => {
-<<<<<<< HEAD
   return new Promise((resolve, reject) => {
     const query = `
     INSERT INTO Dogs (breed, breedInfoLink, imageLink, description)
@@ -16,8 +27,6 @@ const createDog = async (dog) => {
 };
 
 const removeDog = async (dogId) => {
-=======
->>>>>>> parent of 7fe98b1 (doglist)
   return new Promise((resolve, reject) => {
     const query = `
     DELETE FROM Dogs
@@ -33,9 +42,6 @@ const removeDog = async (dogId) => {
 
 module.exports = {
   createDog,
-<<<<<<< HEAD
   getAllDogs,
   removeDog,
-=======
->>>>>>> parent of 7fe98b1 (doglist)
 };

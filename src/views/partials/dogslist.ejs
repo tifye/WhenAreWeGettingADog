@@ -4,9 +4,11 @@
   <a class="btn btn-link mx-2" href="https://www.akc.org/dog-breeds/">Find a dog</a>
   <a class="btn btn-success mx-2" href="#">Add a dog +</a>
   <ul>
-    <li>
-      <%- include("./dogcard.ejs") %> 
-    </li>
+    <% dogs.forEach(dog => { %>
+      <li>
+        <%- include("./dogcard.ejs", dog) %> 
+      </li>
+    <% }) %>
   </ul>
   <div class="divider"></div>
 </div>
