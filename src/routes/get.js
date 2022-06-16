@@ -1,11 +1,9 @@
 const express = require('express');
-const { getAllDogs } = require('../data-access');
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
-  const dogs = await getAllDogs();
-  res.render('layout', { dogs });
+router.get('/', (req, res) => {
+  res.render('layout');
 });
 
 module.exports = router;

@@ -1,14 +1,12 @@
-<div class="colum col-12" id="dogs">
+<div class="colum col-12 text-center" id="dogs">
   <div class="divider"></div>
-  <h2 class="display-block p-centered">Dogs under consideration</h1>
+  <h2>Dogs under consideration</h1>
   <a class="btn btn-link mx-2" href="https://www.akc.org/dog-breeds/">Find a dog</a>
-  <a class="btn btn-success mx-2" href="#add-dog">Add a dog +</a>
+  <a class="btn btn-success mx-2" href="#">Add a dog +</a>
   <ul>
-    <% dogs.forEach(dog => { %>
-      <li>
-        <%- include("./dogcard.ejs", dog) %> 
-      </li>
-    <% }) %>
+    <li>
+      <%- include("./dogcard.ejs") %> 
+    </li>
   </ul>
   <div class="divider"></div>
 </div>
