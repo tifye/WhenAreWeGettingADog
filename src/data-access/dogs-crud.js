@@ -1,5 +1,18 @@
 const { db } = require("./db-connection");
 
+const getAllDogs = async () => {
+  return new Promise((resolve, reject) => {
+    const query = `
+    SELECT * FROM Dogs
+    ORDER BY dogId
+    `;
+    db.all(query, (error, rows) => {
+      if (error) reject(error);
+      resolve(rows);
+    });
+  });
+};
+
 const createDog = async (dog) => {
   return new Promise((resolve, reject) => {
     const query = `
@@ -16,4 +29,5 @@ const createDog = async (dog) => {
 
 module.exports = {
   createDog,
+  getAllDogs,
 };
