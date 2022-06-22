@@ -1,18 +1,18 @@
 <div class="column col-12">
   <h2 class="text-center">Add a Dog</h2>
-  <form action="/" class="form-group mx-2" method="post" id="dog-form">
+  <form action="/" class="form-group mx-2" method="post" id="dog-form" enctype="multipart/form-data">
     <!-- Breed -->
     <label for="breed" class="form-label">Dog Breed</label>
-    <input type="text" name="breed" id="breed" class="form-input" placeholder="Dog Breed">
+    <input type="text" name="breed" id="breed" class="form-input" placeholder="Dog Breed" required>
     <!-- Breed Info Link -->
     <label for="breed-info" class="form-label">Breed Info External Link</label>
-    <input type="text" name="breedInfoLink" id="breed-info" class="form-input" placeholder="https://www.akc.org/dog-breeds/poodle-miniature/">
+    <input type="text" name="breedInfoLink" id="breed-info" class="form-input" placeholder="https://www.akc.org/dog-breeds/poodle-miniature/" >
     <!-- Dog Image -->
     <label for="dog-image" class="form-label">Image of Breed</label>
-    <input type="text" name="imageLink" id="dog-image" class="form-input" placeholder="Image Address Link">
+    <input type="file" name="image" id="dog-image" class="form-input">
     <!-- Short Description/Reasoning -->
     <label for="description" class="form-label">Short Description / Reasoning</label>
-    <textarea name="description" id="description" cols="30" rows="5" class="form-input"></textarea>
+    <textarea name="description" id="description" cols="30" rows="5" class="form-input" ></textarea>
 
     <!-- Submit -->
     <input type="submit" class="btn btn-success float-right my-1">
